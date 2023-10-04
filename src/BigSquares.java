@@ -79,9 +79,6 @@ public class BigSquares {
                 arr[n][i] = solved;
             }
             catch (NoSolution ns) {
-                //System.out.println(s.toString());
-                //System.out.println(vals);
-                //System.out.println(5 + " " + n + " " + i);
                 System.err.println("5: Theorem failed or bug.");
             }
         }
@@ -100,15 +97,11 @@ public class BigSquares {
             }
             try {
                 LatinSquare sq = new LatinSquare(n + 1, s.toString(), vals);
-                //System.out.println(sq.toString() + vals + "." );
                 LatinSquare ls = Solve.solve(sq,genSeed);
                 ls.findAndRemove(j);
                 arr[j][n] = ls;
             }
             catch (NoSolution ns) {
-                //System.out.println(s.toString());
-                //System.out.println(vals);
-                //System.out.println(1 + " " + j + " " + n);
                 System.err.println("1: Theorem failed or bug.");
             }
         }
@@ -224,9 +217,6 @@ public class BigSquares {
                 arr[n][i] = solved;
             }
             catch (NoSolution ns) {
-                //System.out.println(s.toString());
-                //System.out.println(vals);
-                //System.out.println(5 + " " + n + " " + i);
                 System.err.println("5: Theorem failed or bug.");
             }
         }
@@ -245,15 +235,11 @@ public class BigSquares {
             }
             try {
                 LatinSquare sq = new LatinSquare(n + 1, s.toString(), vals);
-                //System.out.println(sq.toString() + vals + "." );
                 LatinSquare ls = Solve.solve(sq,genSeed);
                 ls.findAndRemove(j);
                 arr[j][n] = ls;
             }
             catch (NoSolution ns) {
-                //System.out.println(s.toString());
-                //System.out.println(vals);
-                //System.out.println(1 + " " + j + " " + n);
                 System.err.println("1: Theorem failed or bug.");
             }
         }
