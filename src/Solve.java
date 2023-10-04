@@ -185,7 +185,7 @@ public class Solve {
         return (Square3D) DeepCopy.copy(ls);
     }
 
-    /*public static LatinSquare btBacktracks(LatinSquare ls, EmptySet empty_indices, int solveSeed) throws NoSolution{
+    public static LatinSquare btBacktracks(LatinSquare ls, EmptySet empty_indices, int solveSeed) throws NoSolution{
         if (empty_indices.size() == 0)
             return ls;
         //long selectionStartTime = System.nanoTime();
@@ -214,21 +214,21 @@ public class Solve {
         }
         backtracks++;
         throw new NoSolution(); //must be no solutions in children. return ls representing this.
-    }*/
+    }
     /**
      * Returns the solved version of the latin square if it is possible, or [-1] otherwise.
      */
-    /*public static LatinSquare solve(LatinSquare ls, int solveSeed) throws NoSolution{
+    public static LatinSquare solve(LatinSquare ls, int solveSeed, boolean empty) throws NoSolution{
         EmptySet emptyIndices = new EmptySet(ls,solveSeed);
         return btSearch(ls,emptyIndices, solveSeed);
-    }*/
+    }
 
     /**
      * Runs the back-track search algorithm as described by O. Carvalho.
      * ls: the latin square to the run the algorithm on.
      * empty_indices: the indices of empty cells. of the form ["i,j",...]
      */
-    /*private static LatinSquare btSearch(LatinSquare ls, EmptySet empty_indices, int solveSeed) throws NoSolution{
+    private static LatinSquare btSearch(LatinSquare ls, EmptySet empty_indices, int solveSeed) throws NoSolution{
         if (empty_indices.size() == 0)
             return ls;
         //long selectStartTime = System.nanoTime();
@@ -253,7 +253,7 @@ public class Solve {
             }
         }
         throw new NoSolution(); //must be no solutions in children.
-    }*/
+    }
 
     public  static LatinSquare solve3D(Square3D ls, int solveSeed) throws NoSolution{
         Square3D.EmptySet3D empty = new Square3D.EmptySet3D(ls,solveSeed);
